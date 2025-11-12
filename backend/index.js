@@ -7,6 +7,12 @@ const prisma = new PrismaClient()
 const app = express()
 app.use(express.json())
 
+app.get('/health',(req,res)=>{
+
+    res.status(200).json({"message":"aaalllll issss welllll"})
+
+})
+
 app.post('/signup', async (req, res) => {
     const { name, email, password } = req.body
     const user = await prisma.user.findUnique({
