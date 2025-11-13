@@ -7,7 +7,11 @@ const routes = require('./routes');
 const app = express();
 
 // CORS middleware
-app.use(cors());
+
+app.use(cors({
+    origin:'https://cap-3-evara.vercel.app' || 'http://localhost:5174',
+    credentials: true
+  }));
 
 // Middleware
 app.use(express.json());
