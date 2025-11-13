@@ -7,6 +7,13 @@ const routes = require('./routes');
 const app = express();
 
 
+
+app.use(cors({
+    origin:'https://cap-3-evara.vercel.app' || 'http://localhost:5174',
+    credentials: true
+  }));
+
+
 app.use(cors({
     origin:'https://cap-3-evara.vercel.app' || 'http://localhost:5174',
     credentials: true
